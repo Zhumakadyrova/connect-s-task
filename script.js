@@ -57,9 +57,37 @@ for( let i =0; i< button.length; i ++) {
   example1.style.margin = "10px";
   example0.append(example1);
 }
-
-
 // У нас есть массив [["1", "2", "3", "4", "5", "6"], ["7", "8", "9", "10", "11", "12"], ["13", "14", "15", "16", "17", "18"], ["19", "20", "21", "22", "23", "24"], ["25", "26", "27", "28", "29", "30"]] вывести этот массив в виде таблицы.
+
+let tab = [["1", "2", "3", "4", "5", "6"], ["7", "8", "9", "10", "11", "12"], ["13", "14", "15", "16", "17", "18"], ["19", "20", "21", "22", "23", "24"], ["25", "26", "27", "28", "29", "30"]];
+let example3 = document.createElement("table");
+example3.className = "table1";
+document.body.append(example3);
+for( let i =0; i < tab.length; i ++) {
+  let tr = document.createElement("tr");
+  tr.textContent = tab[i];
+  for( j = 0; j < tab[i].length; j ++) {
+    let td = document.createElement("td");
+    td.textContent = tr[i];
+
+  }
+  example3.appendChild(tr);
+}
 
 
 // BoomBam! - 2 У нас есть массив [["Table", "2", "3", "4", "5"], ["2", "4", "6", "8", "10"], ["3", "6", "9", "12", "15"], ["4", "8", "12", "16", "20"], ["5", "10", "15", "20", "25"]] вывести этот массив в виде таблицы.
+let tab2 = [["Table", "2", "3", "4", "5"], ["2", "4", "6", "8", "10"], ["3", "6", "9", "12", "15"], ["4", "8", "12", "16", "20"], ["5", "10", "15", "20", "25"]];
+let example = document.createElement("table");
+example.className = "table2";
+document.body.append(example);
+for( let i =0; i < tab2.length; i ++) {
+  let tr = document.createElement("tr");
+  tr.textContent = tab2[i];
+  for( j = 0; j < tab2[i].length; j ++) {
+    let td = document.createElement("td");
+    td.textContent = tr[i];
+    td.style.border = "2px  solid black";
+
+  }
+  example.appendChild(tr);
+}
