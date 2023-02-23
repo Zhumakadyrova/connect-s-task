@@ -25,9 +25,14 @@ document.body.append(example2);
 for (let i =0; i < second.length; i++) {
     let listEl = document.createElement("li");
     listEl.textContent = second[i];
-    listEl.style.marginTop =" 20px";
+    listEl.style.paddingTop =" 20px";
     listEl.style.listStyleType = "none";
+    listEl.style.backgroundColor = "yellow";
+    listEl.style.border = "3px solid gray";
+    listEl.style.borderCollapse = "collapse";
+    listEl.style.display = "block";
     example2.append(listEl);
+
 }
 
 // const box = document.createElement("div");
