@@ -64,12 +64,13 @@ let example3 = document.createElement("table");
 example3.className = "table1";
 document.body.append(example3);
 for( let i =0; i < tab.length; i ++) {
+  let elem1 = tab[i]
   let tr = document.createElement("tr");
-  tr.textContent = tab[i];
-  for( j = 0; j < tab[i].length; j ++) {
+  for( j = 0; j < elem1.length; j++) {
     let td = document.createElement("td");
-    td.textContent = tr[i];
-
+    td.textContent = elem1[j];
+    td.style.border = "2px  solid black";
+    tr.append(td)
   }
   example3.appendChild(tr);
 }
