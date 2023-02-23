@@ -46,15 +46,17 @@ for (let i =0; i < second.length; i++) {
 
 // 3. У нас есть массив ["hi", "hello", "bonjour"] вывести элементы массива в виде кнопок.
 
-// let button = ["hi", "hello", "bonjour"];
-// let example0 = document.createElement("button");
-// example0.className = "button3";
-// document.body.append(button);
-// for( let i =0; i< button.length; i ++) {
-//   let example1 = document.createElement("button")
-//   example1.textContent = button[i];
-//   example0.append(example1);
-// }
+let button = ["hi", "hello", "bonjour"];
+let example0 = document.createElement("row");
+example0.className = "button3";
+document.body.append(example0);
+for( let i =0; i< button.length; i ++) {
+  let example1 = document.createElement("button")
+  example1.textContent = button[i];
+  example1.style.border = "2px solid black";
+  example1.style.margin = "10px";
+  example0.append(example1);
+}
 
 
 // У нас есть массив [["1", "2", "3", "4", "5", "6"], ["7", "8", "9", "10", "11", "12"], ["13", "14", "15", "16", "17", "18"], ["19", "20", "21", "22", "23", "24"], ["25", "26", "27", "28", "29", "30"]] вывести этот массив в виде таблицы.
