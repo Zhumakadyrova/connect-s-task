@@ -81,13 +81,13 @@ let example = document.createElement("table");
 example.className = "table2";
 document.body.append(example);
 for( let i =0; i < tab2.length; i ++) {
+  let elem = tab2[i]
   let tr = document.createElement("tr");
-  tr.textContent = tab2[i];
-  for( j = 0; j < tab2[i].length; j ++) {
+  for( j = 0; j < elem.length; j++) {
     let td = document.createElement("td");
-    td.textContent = tr[i];
+    td.textContent = elem[j];
     td.style.border = "2px  solid black";
-
+    tr.append(td)
   }
   example.appendChild(tr);
 }
